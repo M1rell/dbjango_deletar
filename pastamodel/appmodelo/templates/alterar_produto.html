@@ -13,6 +13,7 @@
         <!-- Formulário para alterar o produto -->
         <form method="post">
             {% csrf_token %}
+            {{form.as_p}}
             <!-- Campos do formulário para alterar o produto -->
             <!-- Incluir campos para nome, descrição, preço, etc. -->
             <button type="submit" class="btn btn-primary">Salvar Alterações</button>

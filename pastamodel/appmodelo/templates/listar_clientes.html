@@ -11,7 +11,11 @@
     <h1>Listar Clientes</h1>
     <ul>
         {% for cliente in clientes %}
-            <li>{{ cliente.nome }}</li>
+            <li>{{ cliente.nome }}
+                <a href="{% url 'deletar_cliente' cliente.id %}">Excluir</a>
+                <a href="{% url 'alterar_cliente' cliente.id %}">Editar</a>
+
+            </li>
         {% endfor %}
     </ul>
     <a href="{% url 'cadastrar_cliente' %}">Cadastrar Cliente</a>

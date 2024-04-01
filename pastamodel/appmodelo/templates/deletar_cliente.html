@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar Cliente</title>
+    <title>Alterar Produto</title>
     <!-- Adicione o link para o Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Editar Cliente</h1>
-        <!-- Formulário para editar o cliente -->
+        <h1 class="mt-5">Excluir Cliente</h1>
+        <!-- Formulário para excluir o cliente -->
         <form method="post">
             {% csrf_token %}
-            {{form.as_p}}
-            <!-- Campos do formulário para editar o cliente -->
-            <!-- Incluir campos para nome, email, telefone, endereço, etc. -->
-            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <!-- Campos do formulário para excluir o cliente -->
+            <!-- Incluir campos para nome, descrição, preço, etc. -->
+            <button type="submit" class="btn btn-primary">Confirma a exclusão</button>
         </form>
     </div>
 
