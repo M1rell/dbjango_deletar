@@ -1,5 +1,33 @@
 from django.db import models
 
+class Genero(models.Model):
+    nome = models.CharField(max_length=100)
+
+    def _str_(self):
+        return self.nome
+        
+class Autor(models.Model):
+    nome = models.CharField(max_length=100)
+
+    def _str_(self):
+        return self.nome
+
+class Editora(models.Model):
+    nome = models.CharField(max_length=100)
+
+    def _str_(self):
+        return self.nome  
+
+class Livro(models.Model):
+    titulo = models.CharField(max_length=100)
+    ano_publicacao = models.IntegerField()
+    genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
+    editora = models.ForeignKey(Editora, on_delete=models.CASCADE)
+    # autor = models.ForeignKey(Autor, on_delete=models.CASCATE)
+
+    def _str_(self):
+        return self.titulo  
+
 class Cliente(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
